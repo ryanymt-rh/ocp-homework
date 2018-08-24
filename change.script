@@ -1,0 +1,5 @@
+sed -i 's/GUID/77af/' hosts
+cd host_vars
+rename GUID 77af *.GUID.internal
+sed -i 's/GUID/77af/' *.internal
+
