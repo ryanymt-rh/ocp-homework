@@ -1,0 +1,29 @@
+---
+- name: Prepare GUID environment variable across all hosts
+  hosts: all
+  tasks:
+    - name: All GUID env variable
+      shell: export GUID=`hostname | cut -d"." -f2`; echo "export GUID=$GUID" >> $HOME/.bashrc
+
+- name: Install packages and config auth
+  hosts: localhost
+  tasks:
+    - name: required packages are present
+      yum:
+        name:
+          - ????
+          - ????
+        state: present
+
+- name: Verify Installation and Configuration of Docker
+  hosts: nodes
+  tasks:
+    - name: docker restart
+      shell: systemctl restart docker
+
+- name: Verify NFS Shared Volumes on Hosts
+  hosts: nfs
+  tasks:
+
+- name: Execute the openshift-ansible prerequisites
+  import_playbook:

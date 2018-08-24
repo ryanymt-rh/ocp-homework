@@ -1,0 +1,4 @@
+openshift_hostname: node1.GUID.internal
+openshift_node_labels:
+  client: alpha 
+  cluster: GUID

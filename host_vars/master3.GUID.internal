@@ -1,0 +1,4 @@
+openshift_hostname: master3.GUID.internal
+openshift_node_labels:
+  env: master
+  cluster: GUID
